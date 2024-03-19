@@ -9,5 +9,8 @@ public class Main {
         System.out.println("Square area = " + sq.getArea() + " details: " + sq);
         Triangle tri2 = new Triangle(1.1f, 2.0f,"Red");
         System.out.println("Triangle2 equals to Triangle1: " + tri.equals(tri2));
+
+        System.out.println("S-au creat " + Form.getCounter()+" instante.");
+
     }
 }
