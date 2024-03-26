@@ -7,6 +7,5 @@ public class Main {
         System.out.println(PasswordMaker.getInstance("Razvan").getPassword());
 
         System.out.println(PasswordMaker.getInstance("Razvan").getCounter());
-
     }
 }

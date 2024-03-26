@@ -1,0 +1,6 @@
+Ion_Popescu 223 7 9 6 4 4
+Maria_Popa 223 5 6 7 8 7
+Ion_Popescu 223 7 9 6 4 4
+Diana_Oprea 223 10 4 5 4 2
+Elena_Dragomir 223 9 8 7 8 7
+Ion_Popescu 223 7 9 6 4 4
