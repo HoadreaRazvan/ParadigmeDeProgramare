@@ -1,77 +1,76 @@
 public class DoubleChained
 {
     private Node first;
-
+    private Node last;
 
     public DoubleChained()
     {
         this.first=null;
+        this.last = null;
     }
 
-    public void add(Integer value)
-    {
-        if(this.first==null)
-        {
-            this.first=new Node(value);
-            this.first.setNext(null);
-        }
-        else
-        {
-            Node newNode = new Node(value);
-            Node parcurgere = first;
-            while(parcurgere.getNext()!=null)
-                parcurgere=parcurgere.getNext();
-            parcurgere.setNext(newNode);
+    public void add(Integer value) {
+        Node newNode = new Node(value);
+        if (first == null) {
+            first = newNode;
+            last = newNode;
+        } else {
+            last.setNext(newNode);
+            newNode.setPrev(last);
+            last = newNode;
         }
     }
 
-    public Integer getSize()
-    {
-        Integer ct=0;
-        Node parcurgere = first;
-        while(parcurgere!=null)
-        {
-            ct++;
-            parcurgere=parcurgere.getNext();
+
+    public Integer getSize() {
+        Integer count = 0;
+        Node current = first;
+        while (current != null) {
+            count++;
+            current = current.getNext();
         }
-        return ct;
+        return count;
     }
 
-    public void remove(Integer index)
-    {
-        if(index>=1 && index<=this.getSize()) {
-            Node parcurgere = first;
-            if (index == 1)
-                this.first = first.getNext();
-            else
-            {
-                Integer ct = 2;
-                while (parcurgere != null && ct++ != index)
-                    parcurgere = parcurgere.getNext();
-                parcurgere.setNext(parcurgere.getNext().getNext());
+    public void remove(Integer index) {
+        if (index >= 0 && index < this.getSize()) {
+            Node current = first;
+            for (int i = 0; i < index; i++) {
+                current = current.getNext();
             }
+            if (current == first) {
+                first = first.getNext();
+                if (first != null) {
+                    first.setPrev(null);
+                }
+            } else if (current == last) {
+                last = last.getPrev();
+                if (last != null) {
+                    last.setNext(null);
+                }
+            } else {
+                current.getPrev().setNext(current.getNext());
+                current.getNext().setPrev(current.getPrev());
+            }
+        } else {
+            System.out.println("Index out of bounds!");
         }
-        else
-            System.out.println("Out of index!");
-
     }
-
 
     public void sort()
     {
         Node parcurgere1 = first;
         while(parcurgere1!=null)
         {
-            Node parcurgere2 = first;
+            Node parcurgere2 = parcurgere1.getNext();
 
             while(parcurgere2!=null)
             {
-
-                if(parcurgere2.getValue()>parcurgere1.getValue())
+                if(parcurgere1.getValue()>parcurgere2.getValue())
                 {
-                    Integer aux=parcurgere2.getValue();
-                    parcurgere2.setValue(parcurgere1.getValue());
-                    parcurgere1.setValue(aux);
+                    Integer aux=parcurgere1.getValue();
+                    parcurgere1.setValue(parcurgere2.getValue());
+                    parcurgere2.setValue(aux);
                 }
                 parcurgere2=parcurgere2.getNext();
             }
@@ -79,16 +78,16 @@ public class DoubleChained
         }
     }
 
-    public void show()
-    {
-        Node parcurgere = first;
-        while(parcurgere!=null)
-        {
-            System.out.printf(parcurgere.getValue()+" ");
-            parcurgere=parcurgere.getNext();
+
+    public void show() {
+        Node current = first;
+        while (current != null) {
+            System.out.print(current.getValue() + " ");
+            current = current.getNext();
         }
         System.out.println();
     }
+
 
 
     public Node getFirst() {

@@ -1,6 +1,6 @@
-public abstract class ACalculator<T> {
-    protected T state;
-    public T result() {
+public abstract class ACalculator {
+    protected Object state;
+    public Object result() {
         return state;
     }
     public ACalculator clear() {

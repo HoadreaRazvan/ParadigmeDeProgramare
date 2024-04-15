@@ -1,0 +1,66 @@
+Berceanu Ioan 0743555666 acasa
+Berdei Gabriela 0745676767 acasa
+Berghea Cosmin 0748909090 serviciu
+Dumitrescu Paul 0744123123 acasa
+Goga Mihai 0743222111 acasa
+Goga Mihai 0748222888 serviciu
+Golescu Flaviu 0744333444 acasa
+Ionescu Mihai 0744111222 acasa
+Moldovan Anca 0748000111 serviciu
+Popa Andrei 0744123123 acasa
+Popa Andrei 074888999 serviciu
+Popescu Maria 074888999 serviciu
+Prodan Anamaria 0744333444 acasa
+Prodan Anamaria 074888777 serviciu
+Vecerdea Bianca 0745111222 serviciu
+
+
+Prodan Anamaria 0744333444 acasa
+Prodan Anamaria 074888777 serviciu
+Moldovan Anca 0748000111 serviciu
+Popa Andrei 0744123123 acasa
+Popa Andrei 074888999 serviciu
+Vecerdea Bianca 0745111222 serviciu
+Berghea Cosmin 0748909090 serviciu
+Golescu Flaviu 0744333444 acasa
+Berdei Gabriela 0745676767 acasa
+Berceanu Ioan 0743555666 acasa
+Popescu Maria 074888999 serviciu
+Goga Mihai 0743222111 acasa
+Goga Mihai 0748222888 serviciu
+Ionescu Mihai 0744111222 acasa
+Dumitrescu Paul 0744123123 acasa
+
+
+Goga Mihai 0743222111 acasa
+Berceanu Ioan 0743555666 acasa
+Ionescu Mihai 0744111222 acasa
+Popa Andrei 0744123123 acasa
+Dumitrescu Paul 0744123123 acasa
+Prodan Anamaria 0744333444 acasa
+Golescu Flaviu 0744333444 acasa
+Vecerdea Bianca 0745111222 serviciu
+Berdei Gabriela 0745676767 acasa
+Moldovan Anca 0748000111 serviciu
+Goga Mihai 0748222888 serviciu
+Prodan Anamaria 074888777 serviciu
+Popa Andrei 074888999 serviciu
+Popescu Maria 074888999 serviciu
+Berghea Cosmin 0748909090 serviciu
+
+
+Goga Mihai 0743222111 acasa
+Berceanu Ioan 0743555666 acasa
+Ionescu Mihai 0744111222 acasa
+Popa Andrei 0744123123 acasa *
+Dumitrescu Paul 0744123123 acasa *
+Prodan Anamaria 0744333444 acasa *
+Golescu Flaviu 0744333444 acasa *
+Vecerdea Bianca 0745111222 serviciu
+Berdei Gabriela 0745676767 acasa
+Moldovan Anca 0748000111 serviciu
+Goga Mihai 0748222888 serviciu
+Prodan Anamaria 074888777 serviciu
+Popa Andrei 074888999 serviciu *
+Popescu Maria 074888999 serviciu *
+Berghea Cosmin 0748909090 serviciu
