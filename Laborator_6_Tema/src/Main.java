@@ -26,39 +26,26 @@ public class Main {
         }
 
 
-
-
         try {
             FileWriter writer = new FileWriter("output_tema.txt");
+
+            //Collections.sort(listaAgende, Comparator.comparing(Agenda::getNume).thenComparing(Agenda::getPrenume).thenComparing(Agenda::getTipNrTelefon));
 
             Collections.sort(listaAgende, new Comparator<Agenda>() {
                 @Override
                 public int compare(Agenda o1, Agenda o2) {
-                    return o1.getNume().compareTo(o2.getNume());
+                    if(o1.getNume().compareTo(o2.getNume())!=0)
+                        return o1.getNume().compareTo(o2.getNume());
+                    else if(o1.getPrenume().compareTo(o2.getPrenume())!=0)
+                        return o1.getPrenume().compareTo(o2.getPrenume());
+                    else if(o1.getTipNrTelefon().compareTo(o2.getTipNrTelefon())!=0)
+                        return o1.getTipNrTelefon().compareTo(o2.getTipNrTelefon());
+                    return 0;
                 }
             });
             for(Agenda agenda : listaAgende)
             writer.write(agenda.getNume()+" "+agenda.getPrenume()+" "+agenda.getNrTelefon()+" "+agenda.getTipNrTelefon()+"\n");
 
-            writer.write("\n\n");
-            Collections.sort(listaAgende, new Comparator<Agenda>() {
-                @Override
-                public int compare(Agenda o1, Agenda o2) {
-                    return o1.getPrenume().compareTo(o2.getPrenume());
-                }
-            });
-            for(Agenda agenda : listaAgende)
-                writer.write(agenda.getNume()+" "+agenda.getPrenume()+" "+agenda.getNrTelefon()+" "+agenda.getTipNrTelefon()+"\n");
-
-            writer.write("\n\n");
-            Collections.sort(listaAgende, new Comparator<Agenda>() {
-                @Override
-                public int compare(Agenda o1, Agenda o2) {
-                    return o1.getNrTelefon().compareTo(o2.getNrTelefon());
-                }
-            });
-            for(Agenda agenda : listaAgende)
-                writer.write(agenda.getNume()+" "+agenda.getPrenume()+" "+agenda.getNrTelefon()+" "+agenda.getTipNrTelefon()+"\n");
 
 
             writer.write("\n\n");
@@ -80,14 +67,6 @@ public class Main {
         }
 
 
-//        try{
-//            DataOutputStream dos = new DataOutputStream(new FileOutputStream("output_tema.txt"));
-//            dos.writeUTF("10fawfwa");
-//
-//            dos.close();
-//        }
-//        catch(IOException ioe){
-//            ioe.printStackTrace();
-//        }
+
     }
 }
