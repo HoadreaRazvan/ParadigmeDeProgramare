@@ -17,6 +17,7 @@ public class Main {
         String str = null;
         try{
             while((str = dis.readLine()) != null) {
+                str=str.replaceAll("\\s+", " ");
                 listaAgende.add(new Agenda(str.split(" ")[0],str.split(" ")[1],str.split(" ")[2],str.split(" ")[3]));
             }
             dis.close();
