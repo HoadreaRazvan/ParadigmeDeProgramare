@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="TestMazeGameMVC">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/TestMazeGameMVC.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
