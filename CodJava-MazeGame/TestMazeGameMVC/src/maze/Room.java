@@ -81,6 +81,9 @@ public class Room extends MapSite {
     @Override
     public void enter() {
         System.out.println("Room entered...");
+
+        this.accept(new BombVisitor());
+
         super.notifyEntryListeners();
     }
 
@@ -93,4 +96,21 @@ public class Room extends MapSite {
     public String toString() {
         return "Room Nr=" + number;
     }
+
+
+
+    private boolean containsBomb;
+
+    public boolean containsBomb() {
+        return containsBomb;
+    }
+
+    public void setContainsBomb(boolean containsBomb) {
+        this.containsBomb = containsBomb;
+    }
+
+    public void accept(BombVisitor visitor) {
+        visitor.visit(this);
+    }
+
 }

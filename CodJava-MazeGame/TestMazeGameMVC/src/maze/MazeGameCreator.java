@@ -137,6 +137,9 @@ public class MazeGameCreator {
         Room room8 = makeRoom(8);
         Room room9 = makeRoom(9);
 
+
+        room6.setContainsBomb(true);
+
         Door door0 = makeDoor(room0, room1);
         Door door1 = makeDoor(room1, room2);
         Door door2 = makeDoor(room2, room3);

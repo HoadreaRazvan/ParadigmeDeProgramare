@@ -4,12 +4,13 @@ import maze.listeners.MazeMoveListener;
 import maze.*;
 
 /**
- *  
+ *
  * @author admin
  */
 public class MoveController implements MazeMoveListener {
     //ar fi interesant sa folosesc si Visitor ??
     Maze model;
+
 
     public MoveController(Maze maze) {
         this.model = maze;
@@ -37,12 +38,15 @@ public class MoveController implements MazeMoveListener {
 
     private void move(MapSite toSite) {
         toSite.enter();
+
         if ((toSite instanceof Room)) {
             model.setCurrentRoom((Room) toSite);
+
         } else if ((toSite instanceof Door)) {
             model.setCurrentRoom(((Door) toSite).getOtherSide(model.getCurrentRoom()));
             model.getCurrentRoom().enter();
         }
+
     }
 
     @Override
