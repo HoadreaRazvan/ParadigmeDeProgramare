@@ -38,11 +38,12 @@ public class MoveController implements MazeMoveListener {
 
     private void move(MapSite toSite) {
         toSite.enter();
-
         if ((toSite instanceof Room)) {
             model.setCurrentRoom((Room) toSite);
 
+
         } else if ((toSite instanceof Door)) {
+
             model.setCurrentRoom(((Door) toSite).getOtherSide(model.getCurrentRoom()));
             model.getCurrentRoom().enter();
         }

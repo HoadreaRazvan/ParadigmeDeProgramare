@@ -1,0 +1,13 @@
+Data  descriere              debit    credit
+ -       sold_anterior         -        40
+01.05.2024 incasare            -       2400
+02.05.2024 abonament_banking   58        
+02.05.2024 supermarket_bon88   90
+10.05.2024 abonament_digi      45
+10.05.2024 abonament_telefon   40
+11.05.2024 parcare_cazarma_90  10
+12.05.2024 parcare_str_zaharia_boiu 10  
+12.05.2024 masa_restaurant     168
+13.05.2024 abonament_internet    40
+- rulaj_total_cont              421        2400
+- sold_final_cont                -         1979
